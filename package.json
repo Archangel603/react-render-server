@@ -1,0 +1,37 @@
+{
+  "name": "react-render-server",
+  "version": "1.0.0",
+  "description": "Very simple node server that render React app bundle into HTML string",
+  "main": "index.js",
+  "scripts": {
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Archangel603/react-render-server.git"
+  },
+  "author": "M. Mikhailov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Archangel603/react-render-server/issues"
+  },
+  "homepage": "https://github.com/Archangel603/react-render-server#readme",
+  "dependencies": {
+    "@material-ui/core": "^1.4.2",
+    "express": "^4.16.0",
+    "jss": "^9.8.7",
+    "path-to-regexp": "^2.2.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-jss": "^8.6.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0"
+  }
+}
