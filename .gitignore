@@ -1,4 +1,7 @@
-react-render-server.sln
 .idea
 .vs
+.vscode
 node_modules
+dist/app/*
+dist/public/*
+dist/log.txt
