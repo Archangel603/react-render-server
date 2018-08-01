@@ -11,6 +11,6 @@ gulp.task("default", function () {
         .pipe(babel({
 			presets: ['@babel/env', '@babel/react']
         }))
-        .pipe(sourcemaps.write("."))
+        .pipe(sourcemaps.write("./maps"))
         .pipe(gulp.dest("dist"));
 });

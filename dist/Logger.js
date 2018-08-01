@@ -43,4 +43,4 @@ function () {
 }();
 
 exports.default = Logger;
-//# sourceMappingURL=Logger.js.map
+//# sourceMappingURL=maps/Logger.js.map

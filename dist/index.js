@@ -3,4 +3,4 @@
 require("babel-polyfill");
 
 require("./server");
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=maps/index.js.map
