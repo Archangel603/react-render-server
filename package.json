@@ -1,6 +1,6 @@
 {
   "name": "@archangel63/react-render-server",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Very simple node server that render React app bundle into HTML string",
