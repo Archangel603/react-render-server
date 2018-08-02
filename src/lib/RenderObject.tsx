@@ -4,13 +4,12 @@ import { SheetsRegistry } from 'react-jss/lib/jss';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { createGenerateClassName, MuiThemeProvider, Theme } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
-import { Store } from '../node_modules/redux';
+import { Store } from 'redux';
 
 const utils         = require("util");
 const compressor    = require('yuicompressor');
 
 compressor.compress = utils.promisify(compressor.compress);
-let css = "";
 
 /**
  *
@@ -48,17 +47,13 @@ export default class RenderObject {
 
         yield this;
     
-        if (typeof css === "undefined" || css === "")
-            return compressor.compress(sheetsRegistry.toString(), {
-                charset: 'utf8',
-                type: 'css',
-                'line-break': 80
-            }).then((result) => {
-                css = result;
-                return this._result + `<style id="jss-server-side">${css}</style>`
-            });
-        else
-            return Promise.resolve(this._result + `<style id="jss-server-side">${css}</style>`);
+        return compressor.compress(sheetsRegistry.toString(), {
+            charset: 'utf8',
+            type: 'css',
+            'line-break': 80
+        }).then((result) => {
+            return this._result + `<style id="jss-server-side">${result}</style>`
+        });
     }
     
     private *_withMui(theme: any) {

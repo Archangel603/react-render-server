@@ -5,12 +5,19 @@ var babel       = require('gulp-babel');
 var sourcemaps  = require('gulp-sourcemaps');
 
 gulp.task("default", function () {
-    return tsProject.src()
+
+    let compiledTs = tsProject.src()
         .pipe(sourcemaps.init())
-        .pipe(tsProject()).js
+        .pipe(tsProject());
+
+    return [
+        compiledTs.js
         .pipe(babel({
 			presets: ['@babel/env', '@babel/react']
         }))
         .pipe(sourcemaps.write("./maps"))
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("dist")),
+
+        compiledTs.dts.pipe(gulp.dest("dist"))
+    ];
 });

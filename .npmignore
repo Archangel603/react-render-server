@@ -1,0 +1,11 @@
+src
+dist/app
+dist/log.txt
+dist/public
+.babelrc
+tsconfig.json
+gulpfile.js
+.gitignore
+.idea
+.vscode
+test

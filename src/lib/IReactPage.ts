@@ -1,5 +1,5 @@
 
-type fetchParams = { 
+export type fetchParams = { 
     url: Map<string, string>,
     query: Map<string, string>
 };

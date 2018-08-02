@@ -1,6 +1,7 @@
 import { Request } from "express";
 import { matchRoutes } from "react-router-config";
 import { IReactPage } from './IReactPage';
+import { IServerConfig } from "./IServerConfig";
 
 const pathToRegexp  = require("path-to-regexp");
 
@@ -13,10 +14,10 @@ export default class DataLoader {
     private _query: Map<string, string>;
     private _host: string;
 
-    constructor(routes: any, req: Request, args: Map<string, any>) {
+    constructor(routes: any, req: Request, config: IServerConfig) {
         this._routes = routes;
         this._url = req.url;
-        this._useRedux = !args.has("no-redux");
+        this._useRedux = !config.disableRedux;
         this._query = this.parseQuery(req.query);
         this._host = req.get("X-LOCAL-HOST");
         

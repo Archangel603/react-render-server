@@ -1,6 +1,4 @@
 "use strict";
 
-require("babel-polyfill");
-
-require("./server");
+exports.run = require("./lib/server");
 //# sourceMappingURL=maps/index.js.map
