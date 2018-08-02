@@ -62,7 +62,7 @@ Then you need to make a request to http://localhost.com/home to get rendered Rea
 Option | Possible values | Description
 ---------|-----------------|--------------
 `mode ` | view, render | Sets the work mode of the server. view - server will work with static files and render React to the template. Render - server will only render react app. **Default**: render
-`baseDir` | string | Your app path. **Required!**
+`baseDir` | string | Root path. **Required!**
 `pathToApp` | string | Path to your app build. **Default**: \*baseDir\*/app/js/bundle.js
 `useMui` | boolean | Adds React Material UI support. **Defailt**: false
 `useJss` | boolean| Adds JSS support. **Default**: false
