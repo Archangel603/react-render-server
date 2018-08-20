@@ -2,7 +2,7 @@ import * as React from "react";
 import { renderToString } from 'react-dom/server';
 import { SheetsRegistry } from 'react-jss/lib/jss';
 import JssProvider from 'react-jss/lib/JssProvider';
-import { createGenerateClassName, MuiThemeProvider, Theme } from '@material-ui/core/styles';
+import { MuiThemeProvider, Theme } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 
@@ -37,10 +37,8 @@ export default class RenderObject {
 
         const sheetsRegistry = new SheetsRegistry();
     
-        const generateClassName = createGenerateClassName();
-    
         this._content = (
-            <JssProvider registry={ sheetsRegistry } generateClassName={ generateClassName }>
+            <JssProvider registry={ sheetsRegistry }>
                 { this._content }
             </JssProvider>
         );
