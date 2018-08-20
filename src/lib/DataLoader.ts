@@ -60,8 +60,6 @@ export default class DataLoader {
 
         const promises = branch.map(({ route }) => {
 
-            console.log(route);
-
             let component = route.component as any as IReactPage;
 
             if (component.configure) {
@@ -70,6 +68,9 @@ export default class DataLoader {
                 
                 return Promise.resolve();
             }
+
+            if (!component.getModel)
+                return Promise.resolve();
 
             let model = component.getModel();
             let fillStore   = model.fillStore;
